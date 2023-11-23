@@ -4,10 +4,10 @@ const exphbs = require("express-handlebars")
 const app = express()
 
 app.engine('handlebars',exphbs.engine())
-app.set('viwe engine', 'handlebars')
+app.set('view engine', 'handlebars')
 
 app.get('/', (requisicao, resposta) => {
-    resposta.send("Ola, Mundo")
+    resposta.render('home')
 })
 
 app.listen(3000,() =>{
