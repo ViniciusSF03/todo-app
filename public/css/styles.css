@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root{
+    --bg-header-mobile: url(../imagens/pg-hader-moble-lighit.png);
+}
+
+
+header{
+    background-image: var(--bg-header-mobile);
+}
