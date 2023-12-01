@@ -37,8 +37,25 @@ app.post('/criar', (requisicao, resposta) =>{
 })
 
 app.get('/', (requisicao, resposta) => {
-    resposta.render('home')
-})
+
+    const slq = 'SELECT * FROM tarefas'
+
+    conexao.query(slq, (erro, dados) => {
+        if (erro){
+            return console.log(erro)
+        }
+            const tarefas = dados.map((dado) =>{
+                return{
+                    id: dado.id,
+                    descricao: dado.descricao,
+                    completa: dado.completa === 0 ? false : true
+                }
+            })
+        
+        })
+        resposta.render('home')        
+    })
+
 
 const conexao = mysql.createConnection({
     host: "localhost",
