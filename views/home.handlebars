@@ -1,10 +1,11 @@
 <main>
     <section class="tarefas">
+       {{#each tarefas}}
         <div class="tarefa">
             <form action="">
             <div>
-                    <input type="radio" id="tarefa-1">
-                <label for="tarefa-1">Completar curso de Javascript</label>
+                    <input type="checkbox" id="tarefa-{{this.id}}">
+                <label for="tarefa-1{{this.id}}">{{this.descricao}}</label>
             </div>
 
                 <button>
@@ -12,6 +13,8 @@
                 </button>
             </form>
         </div>
+
+       {{/each}}
       <div class="informacoes">
         <p>5 tarefas</p>        
         <a href="">limpar tarefas</a>
