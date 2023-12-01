@@ -3,7 +3,7 @@
        {{#each tarefas}}
         <div class="tarefa">
             <form action="">
-                
+             
             <div>
                     <input type="checkbox" id="tarefa-{{this.id}}" onchange="completatarefa({{this.id}})">
                 <label for="tarefa-1{{this.id}}">{{this.descricao}}</label>
@@ -17,13 +17,13 @@
 
        {{/each}}
       <div class="informacoes">
-        <p>{{quantidadeTarefasAtivas}} tarefas</p>        
+        <p>{{quantidadeTarefas}} tarefas</p>        
         <a href="">limpar tarefas</a>
      
         <div class="botoes">
         <a href="/">todas</a>
-        <a href="/ativas" class="active">ativas</a>
-        <a href="completas">completas</a>
+        <a href="/ativas" class="active" >ativas</a>
+        <a href="/completas">completas</a>
         </div>
     
       </div>
@@ -31,8 +31,8 @@
 
     <section class="botoes">
         <a href="/">todas</a>
-        <a href="/ativas" class="active">ativas</a>
-        <a href="completas">completas</a>
+        <a href="/ativas" class="active" >ativas</a>
+        <a href="/completas">completas</a>
     </section>
     
 </main>
