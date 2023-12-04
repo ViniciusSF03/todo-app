@@ -19,6 +19,24 @@ app.use(express.json())
 
 //rotas
 
+app.post('/excluir', (requisicao, resposta) => {
+    const id = requisicao.body.id
+
+    const slq = `
+        DELETE FROM tarefas
+        WHERE id = ${id}
+    `
+
+    conexao.query(slq, (erro) =>{
+        if (erro) {
+            return console.log(erro)
+
+        }
+
+        resposta.redirect('/')
+    })
+})
+
 app.post('/completar', (requisicao, resposta) => {
     const id = requisicao.body.id
 
