@@ -1,3 +1,4 @@
+
 <main>
     <section class="tarefas">
        {{#each tarefas}}
@@ -9,7 +10,7 @@
                 <label for="tarefa-1{{this.id}}">{{this.descricao}}</label>
             </div>
 
-                <button>
+                <button onclick="excluirTarefa({{this.id}})">
                     <img src="/imagens/x-icon.png" alt="icone de X para excluir uma tarefa">
                 </button>
             </form>
@@ -18,7 +19,6 @@
        {{/each}}
       <div class="informacoes">
         <p>{{quantidadeTarefas}} tarefas</p>        
-        <a href="">limpar tarefas</a>
      
         <div class="botoes">
         <a href="/">todas</a>
@@ -26,6 +26,8 @@
         <a href="/completas" class="active" >completas</a>
         </div>
     
+         <a href="/limpartarefas">limpar tarefas</a>
+
       </div>
     </section>  
 
